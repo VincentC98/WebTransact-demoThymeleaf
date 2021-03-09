@@ -17,7 +17,7 @@ import java.io.Serializable;
         , @NamedQuery(name = "Customer.findByCreateDate", query = "SELECT c FROM Customer c WHERE c.createDate = :createDate")
         , @NamedQuery(name = "Customer.findByLastUpdate", query = "SELECT c FROM Customer c WHERE c.lastUpdate = :lastUpdate")
         , @NamedQuery(name = "Customer.findAllCustomerSortedByLastName", query = "SELECT  c FROM Customer c order by c.lastName asc ")
-        , @NamedQuery(name = "Customer.findCustomersByFirstNameSubStr", query = "SELECT c FROM Customer c WHERE c.firstName like concat('%', :firstNameSubStr ,'%') ")
+        , @NamedQuery(name = "Customer.findByFirstNameSubStr", query = "select c from Customer c where substring(c.firstName, 1, length(:subStr)) = :subStr")
         , @NamedQuery(name = "Customer.findAllCustomerIdDesc", query = "SELECT c FROM Customer c ORDER BY c.customerId desc "
 
 )

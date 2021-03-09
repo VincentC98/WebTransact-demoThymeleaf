@@ -22,4 +22,6 @@ public interface ICustomerService {
 
     List<Customer> findAllCustomerIdDescAndLimitTen();
 
+    List<Customer> getAllCustomerWithFirstNameSubStr(String subStr);
+
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+<!--HEADER-->
+<div th:replace="fragments/header::top-nav"></div>
+<!--BODY-->
+<h1>Détail de customer : <span th:text="${customer.getCustomerId()}"></span></h1>
+<p>Prénom: <span th:text="${customer.lastName}"></span></p>
+<p>Nom: <span th:text="${customer.firstName}"></span></p>
+<p>Email: <span th:text="${customer.email}"></span></p>
+<p>Addresse: <span th:text="${customer.getAddress().getAddress()}"></span></p>
+<p>Ville: <span th:text="${customer.getAddress().getCity().getCity()}"></span></p>
+<p>Pays: <span th:text="${customer.getAddress().getCity().getCountry().getCountry()}"></span></p>
+
+<!--FOOTER-->
+<footer th:replace="fragments/footer::footer"></footer>
+
+</body>
+</html>

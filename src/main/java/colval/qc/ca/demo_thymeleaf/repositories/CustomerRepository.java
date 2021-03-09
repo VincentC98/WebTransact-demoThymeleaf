@@ -9,6 +9,6 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
     List<Customer> findAllCustomerSortedByLastName();
     Customer findCustomerByCreateDate(Timestamp createDate);
-    List<Customer> findCustomersByFirstNameSubStr(String firstNameSubStr);
+    List<Customer> findByFirstNameSubStr(String subStr);
     List<Customer> findAllCustomerIdDesc();
 }

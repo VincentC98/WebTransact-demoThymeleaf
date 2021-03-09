@@ -6,20 +6,21 @@
     <title>Title</title>
 </head>
 <body>
+
 <table class="table table-hover">
     <thead class="text-warning">
-    <th>Nom</th>
-    <th>Prenom(s)</th>
-    <th>Email</th>
+    <th>city name</th>
+    <th>country name(s)</th>
+
     </thead>
     <tbody>
-    <tr>
-        <td th:text="${getFirstName}"></td>
-        <td th:text="${getLastName}"></td>
-        <td th:text="${getEmail}"></td>
+    <tr th:each="city:${allCity}">
+        <td th:text="${city.getCity()}"></td>
+        <td th:text="${city.getCountry().getCountry()}"></td>
         </td>
     </tr>
     </tbody>
-</table>>
+</table>
+
 </body>
 </html>
