@@ -13,13 +13,13 @@
     <th>Email</th>
     </thead>
     <tbody>
-    <tr>
-        <td th:text="${getFirstName}"></td>
-        <td th:text="${getLastName}"></td>
-        <td th:text="${getEmail}"></td>
+    <tr th:object="${customer}">
+        <td th:text="*{firstName}"></td>
+        <td th:text="*{lastName}"></td>
+        <td th:text="*{email}"></td>
         </td>
     </tr>
     </tbody>
-</table>>
+</table>
 </body>
 </html>

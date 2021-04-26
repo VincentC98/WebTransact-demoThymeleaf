@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+</head>
+<body>
+<!--HEADER-->
+<div th:replace="fragments/header::top-nav"></div>
+
+<form >
+    <label for="add-fname"> Prénom:</label>
+    <input type="text" id="add-fname" placeholder="firstName"><br>
+    <label for="add-lname"> Nom:</label>
+    <input type="text" id="add-lname" placeholder="lastName"><br>
+    <label for="add-email"> Email:</label>
+    <input type="text" id="add-email" placeholder="email"><br>
+    <label for="add-date"> date de création:</label>
+    <input type="date" id="add-date" ><br>
+    <label for="add-address"> adresses:</label>
+    <select name="adress" id="add-address">
+        <option value="">Addresses</option>
+    </select><br>
+    <input type="submit" value="Ajouter">
+</form>
+
+<!--FOOTER-->
+<footer th:replace="fragments/footer::footer"></footer>
+</body>
+</html>

@@ -22,5 +22,9 @@ public class indexController {
         return "index/index"; //folder/file
     }
 
+    @GetMapping("/login")
+    public String login(Model model){
+        return "login/login";
+    }
 
 }

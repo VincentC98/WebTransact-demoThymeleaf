@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Customers</title>
-    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
 
 </head>
 <body>
@@ -20,6 +20,10 @@
     <input required th:field="*{firstname}" type="text" placeholder="rechercher">
     <input type="submit" value="Submit">
 </form>
+
+<a th:href="${'/customer/new'}" class="buttonLink" role="button"
+   aria-disabled="true">ajouter</a>
+
 
 <!--TABLE-->
 <table class="table table-hover">
@@ -39,7 +43,9 @@
         <td th:text="${customer.address.city.city}"></td>
         <td th:text="${customer.address.city.country.country}"></td>
         <td><a th:href="${'/customer/'+customer.customerId}"
-        >Detail</a></td>
+        >Detail</a>
+        <a th:href="${'/customer/update/'+customer.customerId}">ajouter</a>
+        <a th:href="${'/customer/delete/'+customer.customerId}">supprimer</a> </td>
 
         </td>
     </tr>
